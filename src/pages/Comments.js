@@ -1,14 +1,15 @@
-import * as React from "react";
+import { useState } from "react";
 import {
   Container,
   Typography,
-  Skeleton,
   Card,
   CardContent,
   Stack,
 } from "@mui/material";
+import CommentCard from "../components/CommentCard";
 
-const Comments = () => {
+const Comments = ({bad, nice, excellent}) => {
+
   return (
     <Container maxWidth="md" sx={{ textAlign: "center", marginTop: 5 }}>
       <Card sx={{ padding: 4, borderRadius: 3, boxShadow: 4 }}>
@@ -16,21 +17,18 @@ const Comments = () => {
           <Typography variant="h3" gutterBottom>
             Comments
           </Typography>
-          <div style={{display: "flex", gap: "10px" }}>
-          <Stack spacing={1}>
-            <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
 
-            <Skeleton variant="circular" width={40} height={40} />
-            <Skeleton variant="rectangular" width={210} height={60} />
-            <Skeleton variant="rounded" width={210} height={60} />
-          </Stack>
-           <Stack spacing={1}>
-            <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
-
-            <Skeleton variant="circular" width={40} height={40} />
-            <Skeleton variant="rectangular" width={210} height={60} />
-            <Skeleton variant="rounded" width={210} height={60} />
-          </Stack>
+ 
+          <div style={{ marginTop: "5px", display: "flex", gap: "10px" }}>
+            <Stack spacing={1}>
+              <CommentCard type={"😖"} count={bad} />
+            </Stack>
+            <Stack spacing={1}>
+              <CommentCard type={"😊"} count={nice} />
+            </Stack>
+             <Stack spacing={1}>
+              <CommentCard type={"🤩"} count={excellent} />
+            </Stack>
           </div>
         </CardContent>
       </Card>
