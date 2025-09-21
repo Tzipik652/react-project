@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 
 const Home = ({ setBad, setNice, setExcellent }) => {
+  
   return (
     <Container maxWidth="md" sx={{ textAlign: "center", marginTop: 5 }}>
       <Card sx={{ padding: 4, borderRadius: 3, boxShadow: 4 }}>
