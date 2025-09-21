@@ -3,9 +3,10 @@ import Comments from "./pages/Comments";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import { useComments } from "./context/context";
+import { FC } from "react";
 
-const AppRouter = () => {
-  const { bad, nice, excellent, setBad, setNice, setExcellent } = useComments();
+const AppRouter:FC = () => {
+  const { setBad, setNice, setExcellent } = useComments();
 
   return (
     <Routes>
@@ -21,7 +22,7 @@ const AppRouter = () => {
       />
       <Route
         path="/comments"
-        element={<Comments bad={bad} nice={nice} excellent={excellent} />}
+        element={<Comments />}
       />
       <Route path="/about" element={<About />} />
     </Routes>

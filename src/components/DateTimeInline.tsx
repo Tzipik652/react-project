@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-const DateTimeInline = () => {
+const DateTimeInline:FC = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {

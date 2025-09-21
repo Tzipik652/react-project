@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import {
   Container,
   Typography,
@@ -7,9 +7,12 @@ import {
   Stack,
 } from "@mui/material";
 import CommentCard from "../components/CommentCard";
+import { useComments } from "../context/context";
 
-const Comments = ({bad, nice, excellent}) => {
 
+
+const Comments: FC = () => {
+  const {bad, nice, excellent} = useComments();
   return (
     <Container maxWidth="md" sx={{ textAlign: "center", marginTop: 5 }}>
       <Card sx={{ padding: 4, borderRadius: 3, boxShadow: 4 }}>

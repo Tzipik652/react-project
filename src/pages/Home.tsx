@@ -9,8 +9,15 @@ import {
   Button,
   ButtonGroup,
 } from "@mui/material";
+import { FC } from "react";
 
-const Home = ({ setBad, setNice, setExcellent }) => {
+interface HomeProps{
+  setBad: ()=>void;
+  setNice: ()=>void;
+  setExcellent: ()=>void;
+}
+
+const Home:FC<HomeProps> = ({ setBad, setNice, setExcellent }) => {
   
   return (
     <Container maxWidth="md" sx={{ textAlign: "center", marginTop: 5 }}>

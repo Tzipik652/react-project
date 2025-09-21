@@ -1,4 +1,4 @@
-import * as React from "react";
+import { FC } from "react";
 import {
   Container,
   Typography,
@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@mui/material";
 
-const About = () => {
+const About: FC = () => {
   return (
     <Container maxWidth="md" sx={{ textAlign: "center", marginTop: 5 }}>
       <Card sx={{ padding: 4, borderRadius: 3, boxShadow: 4 }}>

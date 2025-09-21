@@ -1,6 +1,12 @@
+import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 
-const CommentCard = ({ type, count }) => {
+interface CommentCardProps{
+  type:string;
+  count: number;
+}
+
+const CommentCard:FC<CommentCardProps> = ({ type, count }) => {
     
   return (
     <Box

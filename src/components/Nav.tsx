@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const Nav = () => {
+const Nav:FC = () => {
   const [value, setValue] = useState("/");
   const navigate = useNavigate();
   const handleChange = (event, newValue) => {
